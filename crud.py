@@ -44,7 +44,8 @@ async def info_update(tel: str, re_tel: str):
             int(re_tel) / 2
         except:
             return Msg("电话输入有误！")
-        return await Info.filter(tel=tel).update(tel=re_tel)
+        await Info.filter(tel=tel).update(tel=re_tel)
+        return Msg("更新成功！").msg()
     return Msg("电话输入有误！").msg()
 
 
