@@ -14,4 +14,4 @@ register_tortoise(
 )
 
 if __name__ == "__main__":
-    run("main:app", host="0.0.0.0", port=9000)
+    run("main:app", reload=True)
